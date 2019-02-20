@@ -1,0 +1,47 @@
+.select__county, .select__month {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    width: 200px;
+    padding: 10px 38px 10px 20px;
+    border: 1px solid #ddd;
+}
+
+.select__county__header {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.select__month__header {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.select__county-select:hover {
+    border: 1px solid #999;
+}
+.custom-select:focus {
+    border: 1px solid #999;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    outline: none;
+}
+/* remove default arrow in IE */
+select::-ms-expand {
+    display:none;
+}
+
+body {
+    background: whitesmoke
+}
+
+.select__county {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}

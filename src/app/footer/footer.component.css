@@ -1,0 +1,13 @@
+.footer__menu__items {
+    grid-column: 1;
+    flex-direction: column;
+    padding-top: 15px
+}
+
+.footer__menu__items__element {
+    font-family: sans-serif;
+    color: rgb(100, 100, 100);
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+
+}
