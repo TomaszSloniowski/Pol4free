@@ -1,8 +1,11 @@
 <div class="container">
-    <div class="item item__filters">
+  <div class="item item__filters">
+    <h4 class="select__county__header">Wybierz województwo</h4>
+    <select class="select__county" name="counties" form="locationform" (change)="onChange($event.target.value)">
+      <option *ngFor="let event of events$ | async">{{event.county}}</option>
+    </select>
 
-<h4 class="select__county__header">Wybierz województwo</h4>
-
+    <!--
 <select class="select__county" name="counties" form="locationform">
     <option value="dolnoslaskie">dolnośląskie</option>
     <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
@@ -21,9 +24,11 @@
     <option value="wielkopolskie">wielkopolskie</option>
     <option value="zachodniopomorskie">zachodniopomorskie</option>
 </select>
+-->
 
-<h4 class="select__month__header">Wybierz miesiąc</h4>
+    <h4 class="select__month__header">Wybierz miesiąc</h4>
 
+    <!--
 <select class="select__month"name="monyh" form="monthform">
     <option value="styczen">styczeń</option>
     <option value="luty">luty</option>
@@ -38,6 +43,7 @@
     <option value="listopad">listopad</option>
     <option value="grudzien">grudzień</option>
 </select>
+-->
 
-</div>
+  </div>
 </div>
