@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/events-thumbnails', pathMatch: 'full' },
   //{ path: 'menu', component: MenuComponent },
   { path: 'events-thumbnails', component: EventsThumbnailsComponent },
-  { path: 'event-details', component: EventDetailsComponent },
+  { path: 'event-details/:id', component: EventDetailsComponent },
   { path: 'filters', component: FiltersComponent },
   { path: 'events-map', component: EventsMapComponent },
   { path: 'add-event', component: AddEventComponent},

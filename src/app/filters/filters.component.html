@@ -1,49 +1,15 @@
 <div class="container">
   <div class="item item__filters">
-    <h4 class="select__county__header">Wybierz województwo</h4>
-    <select class="select__county" name="counties" form="locationform" (change)="onChange($event.target.value)">
-      <option *ngFor="let event of events$ | async">{{event.county}}</option>
+    
+      <h3 class="select__county__header">Wybierz województwo</h3>
+      <select [(ngModel)]="selectedCounty"(ngModelChange)="getCounty()" class="select__county">
+        <option *ngFor="let event of events$ | async" [ngValue]="event.county">{{event.county}}</option>
+      </select>
+  
+    <h3 class="select__month__header">Wybierz miesiąc</h3>
+    <select [(ngModel)]="selectedMonh"(ngModelChange)="getMonth()" class="select__county">
+      <option *ngFor="let event of events$ | async" [ngValue]="event.month">{{event.month}}</option>
     </select>
-
-    <!--
-<select class="select__county" name="counties" form="locationform">
-    <option value="dolnoslaskie">dolnośląskie</option>
-    <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
-    <option value="lubelskie">lubelskie</option>
-    <option value="lubuskie">lubuskie</option>
-    <option value="lodzkie">łódzkie</option>
-    <option value="malopolskie">małopolskie</option>
-    <option value="mazowieckie">mazowieckie</option>
-    <option value="opolskie">opolskie</option>
-    <option value="podkarpackie">podkarpackie</option>
-    <option value="podlaskie">podlaskie</option>
-    <option value="pomorskie">pomorskie</option>
-    <option value="slaskie">śląskie</option>
-    <option value="swietokrzyskie">świętokrzyskie</option>
-    <option value="warminsko-mazurskie">warmińsko-mazurskie</option>
-    <option value="wielkopolskie">wielkopolskie</option>
-    <option value="zachodniopomorskie">zachodniopomorskie</option>
-</select>
--->
-
-    <h4 class="select__month__header">Wybierz miesiąc</h4>
-
-    <!--
-<select class="select__month"name="monyh" form="monthform">
-    <option value="styczen">styczeń</option>
-    <option value="luty">luty</option>
-    <option value="marzec">marzec</option>
-    <option value="kwiecien">kwiecień</option>
-    <option value="maj">maj</option>
-    <option value="czerwiec">czerwiec</option>
-    <option value="lipiec">lipiec</option>
-    <option value="sierpien">siepień</option>
-    <option value="wrzesien">wrzesień</option>
-    <option value="pazdziernik">październik</option>
-    <option value="listopad">listopad</option>
-    <option value="grudzien">grudzień</option>
-</select>
--->
 
   </div>
 </div>

@@ -6,6 +6,7 @@ import { Event } from '../app.event';
 import { EventsService } from '../events-thumbnails/events.service';
 import { FiltersService } from './filters.service';
 
+
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
@@ -17,6 +18,7 @@ export class FiltersComponent implements OnInit {
   county: string;
   selectedCounty: string;
 
+  
   private selectedId: number;
 
   constructor(
@@ -24,7 +26,7 @@ export class FiltersComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private data: FiltersService,
-  ) { }
+  ) {  }
 
   ngOnInit() {
     this.events$ = this.route.paramMap.pipe(
@@ -34,19 +36,27 @@ export class FiltersComponent implements OnInit {
         return this.service.getEvents();
       })
     );
+    
     this.data.currentMessage.subscribe(county => this.county = county);
-    this.selectedCounty = 'mazowieckie';
+    this.selectedCounty = '';
     this.data.changeMessage(this.selectedCounty);
   //  this.router.navigate(['events-thumbnails']);
   }
 
-  onChange(selectedCounty:string) {
-    console.log(selectedCounty);
-    this.data.changeMessage(selectedCounty);
-    this.router.navigate(['events-thumbnails']);
+getCounty () {
+  this.county = this.selectedCounty;
+  console.log(this.county);
+  this.data.changeMessage(this.county);
+  this.router.navigate(['events-thumbnails'])
+}
+
+ //  onChange(selectedCounty) {
+ //   console.log(event);
+ //   this.data.changeMessage(selectedCounty);
+ //   this.router.navigate(['events-thumbnails']);
 }
  // onClick(selectedCounty) {
  //   this.data.changeMessage(selectedCounty);
  //   this.router.navigate(['events-thumbnails']);
-  }
+  
 

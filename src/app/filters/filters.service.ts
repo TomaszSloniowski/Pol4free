@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FiltersService {
 
-  private messageSource = new BehaviorSubject('default message') ;
+  private messageSource = new BehaviorSubject('wybierz województwo') ;
   currentMessage = this.messageSource.asObservable();
 
   constructor() { }

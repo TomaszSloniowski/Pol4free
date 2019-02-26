@@ -3,7 +3,8 @@ export class Event {
     name: string;
     public county: string;
     city: string;
-    date: string;
+    month: string;
+    day: string;
     type: string;
     description: string;
     links: string;
