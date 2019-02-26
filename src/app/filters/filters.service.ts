@@ -6,11 +6,17 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FiltersService {
 
-  private messageSource = new BehaviorSubject('wybierz województwo') ;
-  currentMessage = this.messageSource.asObservable();
+  private messageSourceCounty = new BehaviorSubject('wybierz województwo') ;
+  currentMessageCounty = this.messageSourceCounty.asObservable();
+
+  private messageSourceMonth = new BehaviorSubject('wybierz miesiąc');
+  currentMessageMonth = this.messageSourceMonth.asObservable();
 
   constructor() { }
-  changeMessage(selectedCounty: string) {
-    this.messageSource.next(selectedCounty)
+  changeMessageCounty(selectedCounty: string) {
+  this.messageSourceCounty.next(selectedCounty)
+  };
+  changeMessageMonth(selectedMonth: string) {
+    this.messageSourceMonth.next(selectedMonth);
   }
 }

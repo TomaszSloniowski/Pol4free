@@ -14,7 +14,8 @@ import { Event } from '../app.event';
 export class EventsThumbnailsComponent implements OnInit {
   
   events$: Observable<Event[]>;
-  message: string;
+  messageCounty: string;
+  messageMonth: string;
   private selectedId: number;
 
   constructor(
@@ -31,7 +32,8 @@ export class EventsThumbnailsComponent implements OnInit {
         return this.service.getEvents();
       }),
     );
-    this.data.currentMessage.subscribe(message => this.message = message);
+    this.data.currentMessageCounty.subscribe(messageCounty => this.messageCounty = messageCounty);
+    this.data.currentMessageMonth.subscribe(messageMonth => this.messageMonth = messageMonth);
 
   }
 

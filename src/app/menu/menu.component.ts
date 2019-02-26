@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
 
   events$: Observable<Event[]>;
   county: string;
+  month: string;
   private selectedId: number;
 
   constructor(
@@ -25,7 +26,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.county = 'wybierz województwo'
-    this.data.currentMessage.subscribe(message => this.county = message);
+    this.month = 'wybierz miesiąc'
+    this.data.currentMessageCounty.subscribe(messageCounty => this.county = messageCounty);
+    this.data.currentMessageMonth.subscribe(messageMonth => this.month = messageMonth);
   }
 
 }
