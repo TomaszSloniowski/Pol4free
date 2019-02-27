@@ -30,5 +30,6 @@ export class MenuComponent implements OnInit {
     this.data.currentMessageCounty.subscribe(messageCounty => this.county = messageCounty);
     this.data.currentMessageMonth.subscribe(messageMonth => this.month = messageMonth);
   }
+  
 
 }

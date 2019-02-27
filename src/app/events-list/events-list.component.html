@@ -2,30 +2,14 @@
   <h3 class="item event__list__header">Nadchodzące wydarzenia</h3>
   <div class="item item__events__list" *ngFor="let event of events$ | async">
     <p class="event__location__county">{{event.county}} ></p>
-    <p class="events__list__header__date ">{{event.month}}.2019</p>
+    <p class="events__list__header__date ">{{event.monthName}} 2019</p>
     <div class="events__list_details">
       <div class="events__list__date">{{event.day}}</div>
-      <div class="events__list__name">{{event.name}}<br>
-        <div class="events__list__location"><i class="fas fa-map-marker-alt icon__map__marker"></i>{{event.city}}</div>
-      </div>
+      <a [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId" class="events__list__link">
+        <div class="events__list__name">{{event.name}}<br>
+          <div class="events__list__location"><i class="fas fa-map-marker-alt icon__map__marker"></i>{{event.city}}</div>
+        </div>
+      </a>
     </div>
   </div>
-
-  <!--
-    <div class="events-list-body">
-        <div *ngFor="let event of events$ | async">
-            <ul *ngIf="event.county == county">
-                <li>
-                    <hr>
-                    <a class="list" [routerLink]="['/event-details', event.id]" routerLinkActive="active"
-                        [class.selected]="event.id === selectedId">
-                        <h6> {{event.name}} </h6>
-                         <span> {{event.date}} {{event.city}} </span> 
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
--->
+  

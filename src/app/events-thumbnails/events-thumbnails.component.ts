@@ -34,7 +34,9 @@ export class EventsThumbnailsComponent implements OnInit {
     );
     this.data.currentMessageCounty.subscribe(messageCounty => this.messageCounty = messageCounty);
     this.data.currentMessageMonth.subscribe(messageMonth => this.messageMonth = messageMonth);
-
+  }
+  ngOnChange() {
+    document.body.scrollTop = 0;
   }
 
 }

@@ -4,6 +4,7 @@ export class Event {
     public county: string;
     city: string;
     month: string;
+    monthName: string;
     day: string;
     type: string;
     description: string;

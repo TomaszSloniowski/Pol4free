@@ -21,7 +21,7 @@ export class FiltersComponent implements OnInit {
   selectedMonth: string;
 
   counties = ['mazowieckie','łódzkie','kujawsko-pomorskie'];
-  months = ['05','07']
+  months = ['maj','lipiec']
 
 
   

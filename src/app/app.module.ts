@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { FooterComponent } from './footer/footer.component';
 import { FiltersComponent } from './filters/filters.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -26,7 +27,8 @@ import { FiltersComponent } from './filters/filters.component';
     UserComponent,
     AddEventComponent,
     FooterComponent,
-    FiltersComponent
+    FiltersComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
