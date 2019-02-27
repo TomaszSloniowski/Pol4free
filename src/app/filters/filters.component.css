@@ -9,7 +9,6 @@
 }
 
 .select__county__header {
-    font-family: sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     padding-bottom: 20px;
@@ -17,7 +16,6 @@
 }
 
 .select__month__header {
-    font-family: sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     padding-bottom: 20px;
@@ -42,6 +40,5 @@ body {
 }
 
 .select__county {
-    font-family: sans-serif;
     font-size: 0.9rem;
 }

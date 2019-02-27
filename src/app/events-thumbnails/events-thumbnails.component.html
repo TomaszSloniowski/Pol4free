@@ -1,8 +1,8 @@
-<div class="container">
-  <div *ngFor="let event of events$ | async" class="item item__thumbnails__list">
+<div class="item__thumbnails__list">
+  <div *ngFor="let event of events$ | async" class="">
     <a *ngIf = "event.county == messageCounty || event.month == messageMonth" [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId"
       class="item  item__menu__link ">
-      <img src="/assets/images/events/event{{event.id}}-img.jpg" class="item__thumbnail"><img>
+      <img src="https://tomaszsloniowski.github.io/Pol4free/assets/images/events/event{{event.id}}-img.jpg" class="item__thumbnail"><img>
     <div class="item__thumbnail__label ">
       <ul>
         <li class="thumbnail_label__title">{{event.name}}</li>
