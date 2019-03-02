@@ -22,8 +22,6 @@ export class FiltersComponent implements OnInit {
 
   counties = ['mazowieckie','łódzkie','kujawsko-pomorskie'];
   months = ['maj','lipiec']
-
-
   
   private selectedId: number;
 
@@ -42,39 +40,20 @@ export class FiltersComponent implements OnInit {
         return this.service.getEvents();
       })
     );
-    
-    this.data.currentMessageCounty.subscribe(county => this.county = county);
-    this.selectedCounty = 'wybierz województwo';
-    this.data.changeMessageCounty(this.selectedCounty);
-
-    this.data.currentMessageMonth.subscribe(month => this.month = month);
-    this.selectedMonth = 'wybierz miesiąc';
-    this.data.changeMessageMonth(this.selectedMonth);
-
-  //  this.router.navigate(['events-thumbnails']);
   }
 
 getCounty () {
   this.county = this.selectedCounty;
-  console.log(this.county);
   this.data.changeMessageCounty(this.county);
   this.router.navigate(['events-thumbnails'])
 }
 
 getMonth () {
   this.month = this.selectedMonth;
-  console.log(this.month);
   this.data.changeMessageMonth(this.month);
   this.router.navigate(['events-thumbnails'])
 }
-
- //  onChange(selectedCounty) {
- //   console.log(event);
- //   this.data.changeMessage(selectedCounty);
- //   this.router.navigate(['events-thumbnails']);
 }
- // onClick(selectedCounty) {
- //   this.data.changeMessage(selectedCounty);
- //   this.router.navigate(['events-thumbnails']);
+
   
 

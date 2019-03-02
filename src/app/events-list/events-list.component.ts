@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Event } from '../app.event';
 import { EventsService } from '../events-thumbnails/events.service';
+import { FiltersService } from '../filters/filters.service';
 
 @Component({
   selector: 'app-events-list',
@@ -14,10 +15,16 @@ export class EventsListComponent implements OnInit {
 
   events$: Observable<Event[]>;
   private selectedId: number;
+  county: string;
+  month: string;
+  selectedCounty: string;
+  selectedMonth: string;
 
   constructor(
     private route: ActivatedRoute,
-    private service: EventsService
+    private service: EventsService,
+    private data: FiltersService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,5 +36,23 @@ export class EventsListComponent implements OnInit {
       })
     );
   }
+
+  getCountyandMonth() {
+    console.log(this.selectedId);
+  }
+
+
+  /*
+  getCounty () {
+    this.county = this.selectedCounty;
+    this.data.changeMessageCounty(this.county);
+    this.router.navigate(['events-thumbnails'])
+  }
+  
+  getMonth () {
+    this.month = this.selectedMonth;
+    this.data.changeMessageMonth(this.month);
+    this.router.navigate(['events-thumbnails'])
+  } */
 
 }

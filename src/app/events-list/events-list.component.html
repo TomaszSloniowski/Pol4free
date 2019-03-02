@@ -5,7 +5,10 @@
     <p class="events__list__header__date ">{{event.monthName}} 2019</p>
     <div class="events__list_details">
       <div class="events__list__date">{{event.day}}</div>
+      <!--
       <a [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId" class="events__list__link">
+        -->
+        <a [class.selected]="event.id === selectedId" (click)="getCountyandMonth()" class="events__list__link">
         <div class="events__list__name">{{event.name}}<br>
           <div class="events__list__location"><i class="fas fa-map-marker-alt icon__map__marker"></i>{{event.city}}</div>
         </div>
