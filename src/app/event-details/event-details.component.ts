@@ -4,6 +4,7 @@ import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Event } from '../app.event';
 import { EventsService } from '../events-thumbnails/events.service';
+import { FiltersService } from '../filters/filters.service'
 
 @Component({
   selector: 'app-event-details',
@@ -13,10 +14,13 @@ import { EventsService } from '../events-thumbnails/events.service';
 export class EventDetailsComponent implements OnInit {
 
   event$: Observable<Event>;
+  county: string;
+  month: string;
 
   constructor(
     private route: ActivatedRoute,
-    private service: EventsService
+    private service: EventsService,
+    private data: FiltersService,
   ) { }
 
   ngOnInit() {
@@ -24,9 +28,5 @@ export class EventDetailsComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.service.getEvent(params.get('id')))
     );
-  }
-
-  gotoEvents(event: Event) {
-    let eventId = event ? event.id : null;
-  }
-};
+    }
+  };

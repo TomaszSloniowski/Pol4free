@@ -1,50 +1,26 @@
 <div class="container">
   <div class="item item__details" *ngIf="event$ | async as event">
-       <img src="{{event.pic}}" class="item__image"><img>
-       <div class="item__event__description">
+    <img src="{{event.pic}}" class="item__image"><img>
+    <div class="item__event__description">
       <h4 class="event__description__header">{{event.name}}</h4>
       <p class="event__description__pointer">Szczegóły <i class="fas fa-angle-down"></i></p>
       <p class="event__description__details">{{event.description}}
       </p>
-      <div class="event__description__footer">
-        <i class="fas fa-external-link-alt icon__event__description__footer"></i>
-        <i class="fab fa-facebook-square icon__event__description__footer"></i>
-        <i class="fas fa-map-marker-alt icon__map__marker icon__event__description__footer"></i>
-        <p class="event__source">Strona źródłowa: <br>{{event.link}}</p>
-      </div>
+      <ul class="list__icons__details">
+          <li class="event__description__footer"><i class="fas fa-map-marker-alt icon__details"></i>{{event.city}}</li>
+          <li class="event__description__footer"><i class="fas fa-calendar-day icon__details"></i>{{event.day}}.{{event.month}}.2019</li>
+          <li class="event__description__footer"><i class="fas fa-external-link-alt icon__details"></i>Strona źródłowa: <br>{{event.link}}</li>
+          <li class="event__description__footer"><i class="fab fa-facebook-square icon__details"></i> </li>
+        </ul>
+
+      <!--
+      <ul class="event__description__footer">
+       <li><i class="fas fa-map-marker-alt icon__map__marker icon__event__description__footer"></i><h5 class="event__description__city">{{event.city}</h5></li>
+        <li><i class="fas fa-external-link-alt icon__event__description__footer"></i><p class="event__source">Strona źródłowa: <br>{{event.link}}</p> </li>
+        <li> <i class="fab fa-facebook-square icon__event__description__footer"></i> </li>
+        </ul>
+        -->
     </div>
   </div>
- </div>
- <app-events-list></app-events-list>
-
-<!--
-            <div class="row" *ngIf="event$ | async as event">
-                <div class="col-md-4">
-                    <img class="img" style="width: 100%" src="{{event.pic}}" alt="Card image cap">
-                </div>
-                <div class="col-md-8">
-                    <h2>{{event.name}}</h2>
-                    <p class="description"> {{ event.description }} </p> <br>
-                    
-                    <div class="row container-fluid details-body">
-                        <hr>
-                        <div class="col-md-4">
-                            <h3>{{event.city}}</h3>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>{{event.date}}</h3>
-                        </div>
-                        <div class="col-md-4">
-                            <a class="a1" href="{{event.link}}">
-                                <h3>Źródło</h3>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
--->
+</div>
+<app-events-list></app-events-list>

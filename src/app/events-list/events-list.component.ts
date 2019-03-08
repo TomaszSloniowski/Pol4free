@@ -33,26 +33,9 @@ export class EventsListComponent implements OnInit {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +params.get('id');
         return this.service.getEvents();
+        
       })
     );
   }
-
-  getCountyandMonth() {
-    console.log(this.selectedId);
-  }
-
-
-  /*
-  getCounty () {
-    this.county = this.selectedCounty;
-    this.data.changeMessageCounty(this.county);
-    this.router.navigate(['events-thumbnails'])
-  }
-  
-  getMonth () {
-    this.month = this.selectedMonth;
-    this.data.changeMessageMonth(this.month);
-    this.router.navigate(['events-thumbnails'])
-  } */
 
 }

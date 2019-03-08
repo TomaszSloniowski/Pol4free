@@ -5,22 +5,11 @@
       <select [(ngModel)]="selectedCounty"(ngModelChange)="getCounty()" class="select__county">
       <option *ngFor="let county of counties" [ngValue]="county">{{county}}</option>
       </select>
-  
+  <!--
     <h3 class="select__month__header">Wybierz miesiąc</h3>
     <select [(ngModel)]="selectedMonth"(ngModelChange)="getMonth()" class="select__county">
       <option *ngFor="let month of months" [ngValue]="month">{{month}}</option>
     </select>
-
-  <!--  <h3 class="select__county__header">Wybierz województwo</h3>
-    <select [(ngModel)]="selectedCounty"(ngModelChange)="getCounty()" class="select__county">
-    <option *ngFor="let event of events$ | async" [ngValue]="event.county">{{event.county}}</option>
-    </select>
-
-  <h3 class="select__month__header">Wybierz miesiąc</h3>
-  <select [(ngModel)]="selectedMonh"(ngModelChange)="getMonth()" class="select__county">
-    <option *ngFor="let event of events$ | async" [ngValue]="event.month">{{event.month}}</option>
-  </select>
-  -->
-
+-->
   </div>
 </div>

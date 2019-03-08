@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { EventsService } from '../events-thumbnails/events.service';
 import { FiltersService } from '../filters/filters.service';
@@ -18,6 +18,7 @@ export class MenuComponent implements OnInit {
   
   
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private service: EventsService,
     private data: FiltersService
@@ -26,6 +27,12 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.data.currentMessageCounty.subscribe(messageCounty => this.county = messageCounty);
     this.data.currentMessageMonth.subscribe(messageMonth => this.month = messageMonth);
+  }
+
+  gotoThumbnails() {
+  this.county = 'województwo';
+  this.data.changeMessageCounty(this.county);
+  this.router.navigate(['events-thumbnails'])
   }
   
 

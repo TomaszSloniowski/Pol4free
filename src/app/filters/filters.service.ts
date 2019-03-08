@@ -6,11 +6,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FiltersService {
 
-  private messageSourceCounty = new BehaviorSubject('mazowieckie') ;
+  private messageSourceCounty = new BehaviorSubject('województwo') ;
   currentMessageCounty = this.messageSourceCounty.asObservable();
 
-  private messageSourceMonth = new BehaviorSubject('maj');
+  private messageSourceMonth = new BehaviorSubject('');
   currentMessageMonth = this.messageSourceMonth.asObservable();
+
+  private messageSourceCity = new BehaviorSubject('');
+  currentMessageCity = this.messageSourceCity.asObservable();
 
   constructor() { }
   changeMessageCounty(selectedCounty: string) {

@@ -106,8 +106,8 @@ h5 {
   justify-items: center;
   max-height: 120px;
   max-width: 120px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding: 30px;
+  
 }
 
 .item__thumbnail__label {
@@ -116,6 +116,10 @@ h5 {
   background-color: whitesmoke;
   font-size: 0.8rem;
   font-weight: 500px;
+}
+.item__thumbnail__label__list {
+  padding: 30px 30px 15px 0px;
+  
 }
 
 .item__details {
@@ -229,25 +233,31 @@ a:link a:visited a:active a:focus {
   padding-right: 7px;
 }
 
+.list__icons__details {
+  padding-left: 0px;
+  padding-top: 25px;
+}
+
+.icon__details {
+  color: rgb(100, 100, 100);
+  font-size: 1.1rem;
+  padding: 20px, 20px;
+  padding-right: 15px;
+}
+
 .icon__hamburger {
   padding: 5px;
   font-size: 1.3rem;
   color: black;
 }
 
-.icon__event__description__footer {
-  color: rgb(100, 100, 100);
-  font-size: 1.2em;
-  padding-top: 25px;
-  padding-right: 20px;
-}
 
 /*---------- thubnail label ------------*/
 
 ul {
   list-style-type: none;
   padding-left: 20px;
-  padding-top: 0px;
+  padding-top: 20px;
   margin-top: 0px;
 }
 
@@ -270,13 +280,19 @@ ul {
 }
 
 
-/*------- Event details -------------*/
+/*------- event details -------------*/
 
 .event__description__header {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 20px;
   font-size: 1.1rem;
   font-weight: 600px;
+}
+.event__description__city {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 200px;
 }
 
 .event__description__pointer {
@@ -295,8 +311,11 @@ ul {
 }
 
 .event__description__footer {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .event__source {
@@ -308,7 +327,7 @@ ul {
 }
 
 
-/*-------- Events list ----------------*/
+/*-------- events list ----------------*/
 
 .event__list__header {
   grid-column: 1/3;
@@ -330,7 +349,7 @@ ul {
   padding-top: 10px;
   padding-bottom: 15px;
   color: rgb(122, 201, 228);
-  font-size: rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 
