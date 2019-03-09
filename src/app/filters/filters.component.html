@@ -1,6 +1,5 @@
 <div class="container">
   <div class="item item__filters">
-    
       <h3 class="select__county__header">Wybierz województwo</h3>
       <select [(ngModel)]="selectedCounty"(ngModelChange)="getCounty()" class="select__county">
       <option *ngFor="let county of counties" [ngValue]="county">{{county}}</option>

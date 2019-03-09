@@ -27,6 +27,6 @@ export class EventDetailsComponent implements OnInit {
     this.event$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.service.getEvent(params.get('id')))
-    );
-    }
+      );
+     }
   };

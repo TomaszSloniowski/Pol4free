@@ -8,9 +8,9 @@
       </p>
       <ul class="list__icons__details">
           <li class="event__description__footer"><i class="fas fa-map-marker-alt icon__details"></i>{{event.city}}</li>
-          <li class="event__description__footer"><i class="fas fa-calendar-day icon__details"></i>{{event.day}}.{{event.month}}.2019</li>
-          <li class="event__description__footer"><i class="fas fa-external-link-alt icon__details"></i>Strona źródłowa: <br>{{event.link}}</li>
-          <li class="event__description__footer"><i class="fab fa-facebook-square icon__details"></i> </li>
+          <li class="event__description__footer__date"><i class="fas fa-calendar-day icon__details"></i>{{event.day}}.{{event.month}}.2019</li>
+          <a class = "link" href = "{{event.linkSource}}"><li class="event__description__footer__source"><i class="fas fa-external-link-alt icon__details"></i>{{event.linkSource}}</li></a>
+          <a class = "link" href = "{{event.linkFb}}"><li class="event__description__footer"><i class="fab fa-facebook-square icon__details"></i> </li></a> 
         </ul>
 
       <!--

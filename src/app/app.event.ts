@@ -8,6 +8,7 @@ export class Event {
     day: string;
     type: string;
     description: string;
-    links: string;
+    linkSource: string;
+    linkFb: string;
     pic: string;
     }

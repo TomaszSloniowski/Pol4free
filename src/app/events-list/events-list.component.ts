@@ -33,9 +33,12 @@ export class EventsListComponent implements OnInit {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = +params.get('id');
         return this.service.getEvents();
-        
       })
     );
+  }
+
+  gotoThumbnails(selectedId) {
+
   }
 
 }
