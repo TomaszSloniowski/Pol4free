@@ -1,7 +1,7 @@
 export class Event {
     public id: number;
     name: string;
-    public county: string;
+    county: string;
     city: string;
     month: string;
     monthName: string;
@@ -11,4 +11,6 @@ export class Event {
     linkSource: string;
     linkFb: string;
     pic: string;
+    lat: number;
+    lng: number;
     }

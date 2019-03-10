@@ -2,8 +2,8 @@
   <div *ngFor="let event of events$ | async">
     
     <a *ngIf = "messageCounty =='województwo'" [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId"
-      class="item  item__menu__link ">
-      <img src="https://tomaszsloniowski.github.io/Pol4free/assets/images/events/event{{event.id}}-img.jpg" class="item__thumbnail"><img>
+      class="item  item__menu__link">
+      <img src="{{event.pic}}" class="item__thumbnail"><img>
     <div class="item__thumbnail__label">
       <ul class="item__thumbnail__label__list">
         <li class="thumbnail_label__title">{{event.name}}</li>
@@ -15,7 +15,7 @@
 
     <a *ngIf = "event.county == messageCounty" [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId"
     class="item  item__menu__link">
-    <img src="https://tomaszsloniowski.github.io/Pol4free/assets/images/events/event{{event.id}}-img.jpg" class="item__thumbnail"><img>
+    <img src="{{event.pic}}" class="item__thumbnail"><img>
   <div class="item__thumbnail__label">
     <ul class="item__thumbnail__label__list">
       <li class="thumbnail_label__title">{{event.name}}</li>

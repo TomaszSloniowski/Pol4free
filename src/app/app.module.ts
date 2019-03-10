@@ -14,6 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FiltersComponent } from './filters/filters.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -34,8 +37,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    //AngularFontAwesomeModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAQoPb1iCzBavDFfFqVk3BT3R-HtAlxR7U'
+    }),
+    AgmSnazzyInfoWindowModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

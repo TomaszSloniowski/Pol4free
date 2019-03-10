@@ -1,0 +1,7 @@
+agm-map {
+  height: 350px;
+}
+.map {
+    display: flex;
+    width: 100%;
+}

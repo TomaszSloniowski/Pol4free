@@ -1,4 +1,25 @@
-<p>
-  <br>
-  Map component under construction
-</p>
+<!--<div class="">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]={{event.lat}} [longitude]={{event.lng}} ></agm-marker>
+    <agm-info-window>{{event.city}}</agm-info-window>
+  </agm-map>
+</div>
+-->
+
+
+<agm-map [latitude]="WarsawLat" [longitude]="WarsawLng" [zoom]="9">
+  <div *ngFor="let event of events$ | async">
+    <a [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId">
+      <agm-marker latitude={{event.lat}} longitude={{event.lng}}>
+        <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+          <ng-template>
+            {{event.city}}<br>
+            {{event.name}}
+          </ng-template>
+        </agm-snazzy-info-window>
+      </agm-marker>
+    </a>
+  </div>
+</agm-map>
+
+<app-events-list></app-events-list>
