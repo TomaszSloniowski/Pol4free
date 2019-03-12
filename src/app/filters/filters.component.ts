@@ -20,8 +20,8 @@ export class FiltersComponent implements OnInit {
   selectedCounty: string;
   selectedMonth: string;
 
-  counties = ['mazowieckie','łódzkie','kujawsko-pomorskie'];
-  months = ['maj','lipiec']
+  counties = ['mazowieckie','łódzkie','kujawsko-pomorskie', 'śląskie'];
+ // months = ['maj','lipiec']
   
   private selectedId: number;
 
@@ -48,11 +48,11 @@ getCounty () {
   this.router.navigate(['events-thumbnails'])
 }
 
-getMonth () {
+/*getMonth () {
   this.month = this.selectedMonth;
   this.data.changeMessageMonth(this.month);
   this.router.navigate(['events-thumbnails'])
-}
+}*/
 }
 
   

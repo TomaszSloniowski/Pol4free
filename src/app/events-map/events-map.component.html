@@ -1,21 +1,21 @@
-<!--<div class="">
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]={{event.lat}} [longitude]={{event.lng}} ></agm-marker>
-    <agm-info-window>{{event.city}}</agm-info-window>
-  </agm-map>
-</div>
--->
 
-
-<agm-map [latitude]="WarsawLat" [longitude]="WarsawLng" [zoom]="9">
+<agm-map [latitude]="WarsawLat" [longitude]="WarsawLng" [zoom]="7">
   <div *ngFor="let event of events$ | async">
     <a [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId">
       <agm-marker latitude={{event.lat}} longitude={{event.lng}}>
-        <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <agm-snazzy-info-window [maxWidth]="150" [closeWhenOthersOpen]="true" [isOpen]="show">
           <ng-template>
-            {{event.city}}<br>
-            {{event.name}}
-          </ng-template>
+            <div class="info-window__city">
+              {{event.city}}
+            </div>
+            <div class="info-window__name">
+              {{event.name}}
+            </div>
+            <div class="info-window__date"><i class="fas fa-calendar-day icon__date"></i>
+              {{event.day}}.{{event.month}}.2019
+            </div>
+            <a class="info-window__link" [routerLink]="['/event-details', event.id]" routerLinkActive="active" [class.selected]="event.id === selectedId"><i class="fas fa-info-circle icon__date"></i>Szczegóły</a>
+            </ng-template>
         </agm-snazzy-info-window>
       </agm-marker>
     </a>

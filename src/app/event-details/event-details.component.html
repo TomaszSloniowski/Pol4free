@@ -7,19 +7,15 @@
       <p class="event__description__details">{{event.description}}
       </p>
       <ul class="list__icons__details">
-          <li class="event__description__footer"><i class="fas fa-map-marker-alt icon__details"></i>{{event.city}}</li>
-          <li class="event__description__footer__date"><i class="fas fa-calendar-day icon__details"></i>{{event.day}}.{{event.month}}.2019</li>
-          <a class = "link" href = "{{event.linkSource}}"><li class="event__description__footer__source"><i class="fas fa-external-link-alt icon__details"></i>{{event.linkSource}}</li></a>
-          <a class = "link" href = "{{event.linkFb}}"><li class="event__description__footer"><i class="fab fa-facebook-square icon__details"></i> </li></a> 
-        </ul>
-
-      <!--
-      <ul class="event__description__footer">
-       <li><i class="fas fa-map-marker-alt icon__map__marker icon__event__description__footer"></i><h5 class="event__description__city">{{event.city}</h5></li>
-        <li><i class="fas fa-external-link-alt icon__event__description__footer"></i><p class="event__source">Strona źródłowa: <br>{{event.link}}</p> </li>
-        <li> <i class="fab fa-facebook-square icon__event__description__footer"></i> </li>
-        </ul>
-        -->
+        <li class="event__description__footer"><i class="fas fa-map-marker-alt icon__details"></i>{{event.city}}</li>
+        <li class="event__description__footer__date"><i class="fas fa-calendar-day icon__details"></i>{{event.day}}.{{event.month}}.2019</li>
+        <a class="link" href="{{event.linkSource}}">
+          <li class="event__description__footer__source"><i class="fas fa-external-link-alt icon__details"></i>{{event.linkSource}}</li>
+        </a>
+        <a class="link" href="{{event.linkFb}}">
+          <li class="event__description__footer"><i class="fab fa-facebook-square icon__details"></i> </li>
+        </a>
+      </ul>
     </div>
   </div>
 </div>

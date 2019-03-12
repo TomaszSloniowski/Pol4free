@@ -1,12 +1,16 @@
 .footer__menu__items {
-    grid-column: 1;
-    flex-direction: column;
-    padding-top: 15px
+  grid-column: 1;
+  flex-direction: column;
+  padding-top: 25px
 }
 
 .footer__menu__items__element {
-    color: rgb(100, 100, 100);
-    font-size: 0.7rem;
-    padding-bottom: 10px;
+  color: whitesmoke;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 10px;
+}
 
+.footer__link {
+  text-decoration: none;
 }

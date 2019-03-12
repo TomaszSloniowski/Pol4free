@@ -5,3 +5,34 @@ agm-map {
     display: flex;
     width: 100%;
 }
+
+.info-window__city {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 5px;
+}
+.info-window__name {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 7px;
+}
+.info-window__link {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 7px;
+}
+
+.info-window__date {
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(122, 201, 228);
+  padding: 7px;
+}
+
+@media (min-width: 48em) {
+  agm-map {
+    height: 400px;
+  }
+}

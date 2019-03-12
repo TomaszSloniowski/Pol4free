@@ -38,15 +38,15 @@ export const EVENTS: Event[] = [
         lat: 52.5468200,
         lng: 19.7063800
     },
-    /*
+    
     {
-        id: 5, name: "Zlot food trucków",
-        county: "mazowieckie", city: "Piaseczno", month: "05", monthName: "maj", day: "10-12", type: "zlot", description: "Zapraszamy do spróbowania kilkunastu kuchni świata. Niebawem pojawi się lista Food Trucków oraz więcej szczegółów. Impreza współorganizowana przez Gmina Piaseczno.",
-        linkSource: "https://piaseczno.eu/wydarzenia/wydarzenie/zlot-food-truckow-w-piasecznie-2019/",
-        linkFb:"https://www.facebook.com/events/425888754844872/?active_tab=about",
-        pic: "https://tomaszsloniowski.github.io/Pol4free/assets/images/events/event5-img.jpg",
-        lat: 52.0736278,
-        lng: 21.0273584
-    }, */
+        id: 5, name: "Motocyklowy Zjazd Gwiaździsty do Częstochowy",
+        county: "śląskie", city: "Olsztyn k.Częstochowy", month: "04", monthName: "kwiecień", day: "14", type: "zlot", description: "Stowarzyszenie Motocyklowy Zjazd Gwiaździsty do Częstochowy ma zaszczyt zaprosić wszystkich Motocyklistów i Motocyklistki na uroczyste otwarcie sezonu motocyklowego 2019.",
+        linkSource: "http://zlotymotocyklowe.pl/Jasna-G%C3%B3ra-2019-Otwarcie-Sezonu-Motocyklowego-3239",
+        linkFb: "https://www.facebook.com/Stowarzyszenie-Motocyklowy-Zjazd-Gwia%C5%BAdzisty-do-Cz%C4%99stochowy-620883381272049/?tn-str=k*F",
+        pic: "/assets/images/events/event5-img.jpg",
+        lat: 50.751944,
+        lng: 19.267778
+    }
 
 ];

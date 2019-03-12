@@ -11,14 +11,14 @@
 
 .select__county__header {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .select__month__header {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 20px;
     padding-top: 40px;
 }

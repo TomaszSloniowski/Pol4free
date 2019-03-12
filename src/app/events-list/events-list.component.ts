@@ -37,8 +37,4 @@ export class EventsListComponent implements OnInit {
     );
   }
 
-  gotoThumbnails(selectedId) {
-
-  }
-
 }
