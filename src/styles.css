@@ -24,6 +24,10 @@ h4,
 h5 {
   margin: 0;
 }
+p {
+  letter-spacing: 0.025em;
+  line-height: 1.5em;
+}
 
 .link {
   text-decoration: none;
@@ -31,6 +35,7 @@ h5 {
 
 ul {
   list-style-type: none;
+  padding-left: 0px;
 }
 
 
@@ -52,11 +57,6 @@ ul {
   grid-column: 1;
   grid-row: 1;
   justify-items: start;
-  color: black;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 20px;
-  padding-bottom: 3px;
 }
 
 .item__hamburger {
@@ -126,7 +126,7 @@ ul {
   grid-column: 1/3;
   min-height: 120px;
   background-color: rgb(122, 201, 228);
-  padding: 30px;
+  padding: 25px;
 }
 
 .item__filters {
@@ -192,15 +192,6 @@ ul {
     max-width: 40vw;
   }
 
-  .event__description__header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    font-size: 1.5rem;
-    font-weight: 600px;
-    letter-spacing: 0.03rem;
-    word-spacing: 0.5rem;
-  }
 
   .event__description__pointer {
     display: none;
@@ -212,9 +203,8 @@ ul {
     justify-items: start;
     background-color: rgb(250, 250, 250);
     font-size: 0.9rem;
-    letter-spacing: 0.025px;
     word-spacing: 0.1px;
-    line-height: 1.3;
+    line-height: 1.5em;
     padding: 25px;
   }
 

@@ -33,6 +33,6 @@ agm-map {
 
 @media (min-width: 48em) {
   agm-map {
-    height: 400px;
+    height: 450px;
   }
 }

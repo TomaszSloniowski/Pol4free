@@ -44,7 +44,7 @@ export const EVENTS: Event[] = [
         county: "śląskie", city: "Olsztyn k.Częstochowy", month: "04", monthName: "kwiecień", day: "14", type: "zlot", description: "Stowarzyszenie Motocyklowy Zjazd Gwiaździsty do Częstochowy ma zaszczyt zaprosić wszystkich Motocyklistów i Motocyklistki na uroczyste otwarcie sezonu motocyklowego 2019.",
         linkSource: "http://zlotymotocyklowe.pl/Jasna-G%C3%B3ra-2019-Otwarcie-Sezonu-Motocyklowego-3239",
         linkFb: "https://www.facebook.com/Stowarzyszenie-Motocyklowy-Zjazd-Gwia%C5%BAdzisty-do-Cz%C4%99stochowy-620883381272049/?tn-str=k*F",
-        pic: "/assets/images/events/event5-img.jpg",
+        pic: "https://tomaszsloniowski.github.io/Pol4free/assets/images/events/event5-img.jpg",
         lat: 50.751944,
         lng: 19.267778
     }

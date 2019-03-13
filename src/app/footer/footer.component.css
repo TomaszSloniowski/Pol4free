@@ -1,7 +1,7 @@
 .footer__menu__items {
   grid-column: 1;
   flex-direction: column;
-  padding-top: 25px
+  padding-top: 25px;
 }
 
 .footer__menu__items__element {
